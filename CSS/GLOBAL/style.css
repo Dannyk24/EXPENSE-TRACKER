@@ -1,0 +1,21 @@
+/*GLOBAL STYLING*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+/*
+Media Queries
+First Breakpoint: 1024px
+Second Breakpoint: 768px
+Third Breakpoint: 550px
+Last Breakpoint: 370px
+*/
