@@ -61,6 +61,10 @@ header{
     align-items: center;
     border: var(--general-border);
     cursor: pointer;
+    transition: var(--general-transition);
+}
+.header-right .fa-bell:hover{
+    background-color: var(--secondary-hover-color)
 }
 .primary-button{
     display: flex;
