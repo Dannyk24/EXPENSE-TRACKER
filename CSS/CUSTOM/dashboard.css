@@ -5,8 +5,8 @@
 }
 .summary-cards-container{
     display: grid;
-    grid-template-columns: /*repeat(auto-fit,minmax(200px,1fr))*/ 1fr 1fr 1fr;
-    column-gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap: 20px;
 }
 .summary-card-title{
     color: var(--secondary-text-color);
