@@ -65,7 +65,7 @@ nav{
     transition: all 0.15s ease-in-out;
 }
 .nav-item-container:hover{
-    background-color: var(--hover-color);
+    background-color: var(--primary-hover-color);
 }
 .active-nav-item{
     background-color: var(--primary-color);
@@ -86,7 +86,7 @@ nav{
     justify-self: center;
     align-self: center;
     height: 2px;
-    background-color: var(--hover-color);
+    background-color: var(--primary-hover-color);
     border: 20px;
 }
 .dashboard-user-profile-container .bottom-section{
@@ -136,9 +136,9 @@ nav{
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: var(--general-transition);
     margin-left: 20px;
 }
 .bottom-section .navigation:hover{
-    background-color: var(--hover-color);
+    background-color: var(--primary-hover-color);
 }

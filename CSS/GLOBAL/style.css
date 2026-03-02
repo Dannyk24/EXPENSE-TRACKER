@@ -4,7 +4,8 @@
     --surface-color: #1a162d;
     --primary-color: #8b5cf6;
     --secondary-color: #261b38;
-    --hover-color: #2e2639;
+    --primary-hover-color: #2e2639;
+    --secondary-hover-color: #4c3582;
     --accent-color: #c4b5fd;
     --success-color: #10b981;
     --danger-color: #ef4444;
@@ -15,6 +16,7 @@
     --general-shadow: 0px 0px 25px 9px rgba(139,92,246,0.2);
     --primary-font: montserrat, arial;
     --secondary-font: inter, sans-serrif;
+    --general-transition: all 0.2s ease-in-out;
 }
 *{
     box-sizing: border-box;
@@ -30,6 +32,12 @@ a{
 }
 h1,h2,h3,h4,h5,h6,p{
     margin: 0;
+}
+main{
+    margin-left: 276px;
+}
+section{
+    padding: 15px;
 }
 /*
 Media Queries
