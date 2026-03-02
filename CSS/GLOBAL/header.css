@@ -5,7 +5,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: var(--background-color);
+    background-color: var(--surface-color);
     border-bottom: var(--general-border);
 }
 .header-left{
@@ -33,12 +33,12 @@ header{
     position: absolute;
     left: 12px;
     font-size: 13px;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 .search-bar-container input{
     border: none;
     background: none;
-    background-color: var(--surface-color);
+    background-color: var(--background-color);
     height: 40px;
     border: var(--general-border);
     border-radius: 10px;
@@ -75,7 +75,7 @@ header{
     display: flex;
     align-items: center;
     gap: 7px;
-    font-size: 14px;
+    font-size: 13px;
     justify-content: start;
     border-radius: 7px;
     cursor: pointer;
