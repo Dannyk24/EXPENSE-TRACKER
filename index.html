@@ -106,7 +106,7 @@
                 <div class="dashboard-card summary-card">
                     <h3 class="summary-card-title">Total Balance</h3>
                     <p class="summary-card-amount amount-container">
-                        <span>$</span>
+                        <span class="general-currency-symbol">$</span>
                         <span>12,450.00</span>
                     </p>
                     <div class="summary-card-comparison-container">
@@ -121,7 +121,7 @@
                 <div class="dashboard-card summary-card">
                     <h3 class="summary-card-title">Monthly Income</h3>
                     <p class="summary-card-amount amount-container">
-                        <span>$</span>
+                        <span class="general-currency-symbol">$</span>
                         <span>4,200.00</span>
                     </p>
                     <div class="summary-card-comparison-container">
@@ -136,7 +136,7 @@
                 <div class="dashboard-card summary-card">
                     <h3 class="summary-card-title">Monthly Expenses</h3>
                     <p class="summary-card-amount amount-container">
-                        <span>$</span>
+                        <span class="general-currency-symbol">$</span>
                         <span>2,840.00</span>
                     </p>
                     <div class="summary-card-comparison-container">
@@ -149,7 +149,58 @@
                     <img src="ASSETS/IMAGES/MONTHLY-EXPENSES-LINE.svg" alt="summary-card-line" draggable="false">
                 </div>
             </div>
-            
+            <div class="main-cards-container">
+                <div class="main-cards-container-top">
+                    <div class="dashboard-card main-card" id="spending-overview-card">
+                        <div class="main-card-title-container">
+                            <h4 class="title">Spending Overview</h4>
+                            <p class="sub-title">Monthly comparison of expenditure</p>
+                        </div>
+                        <canvas id="dashboard-chart">
+                            <!--Dynamic content to be injested by chart.js library-->
+                        </canvas>
+                        <div class="time-range-selector-container">
+                            <div class="selector active-selector">Monthly</div>
+                            <div class="selector">Weekly</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card main-card">
+                        <div class="main-card-title-container">
+                            <h4 class="title">Budget Progress</h4>
+                        </div>
+                        <div class="budget-progress-percentage-container">
+                            <div class="outer-circle">
+                                <div class="percentage-value-circle">
+                                    <div class="percentage-value">75% <span>spent</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="monthly-budget-left">
+                            You have <span class="amount-container">$1,040</span> left in your monthly budget
+                        </p>
+                        <div class="budget-progress-category-overview-container">
+                            <div class="budget-progress-category-overview">
+                                <div class="top">
+                                    <div class="category-name">Shopping</div>
+                                    <div class="category-percentage">85%</div>
+                                </div>
+                                <div class="category-percentage-container">
+                                    <div class="category-percentage-value" id="shopping-percentage-value"></div>
+                                </div>
+                            </div>
+                            <div class="budget-progress-category-overview">
+                                <div class="top">
+                                    <div class="category-name">Groceries</div>
+                                    <div class="category-percentage">42%</div>
+                                </div>
+                                <div class="category-percentage-container">
+                                    <div class="category-percentage-value" id="groceries-percentage-value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section data-section="transactions"></section>
