@@ -1,12 +1,15 @@
 header{
-    width: 100%;
-    background-color: red;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: var(--surface-color);
+    background-color: transparent;
+    backdrop-filter: blur(15px);
     border-bottom: var(--general-border);
+    position: fixed;
+    z-index: 20;
 }
 .header-left{
     display: flex;
@@ -50,6 +53,9 @@ header{
 }
 .search-bar-container input:focus{
     outline: 1px solid var(--primary-color);
+}
+.header-right{
+
 }
 
 .header-right .fa-bell{

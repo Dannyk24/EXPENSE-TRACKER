@@ -72,11 +72,11 @@
 .main-card-title-container{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 .main-card-title-container .title{
     font-family: var(--secondary-font);
-    font-size: 18px;
+    font-size: 17px;
 }
 .main-card-title-container .sub-title{
     font-family: var(--secondary-font);
@@ -140,7 +140,7 @@
     align-items: center;
     margin: -12px;
     background: conic-gradient(
-        var(--success-color) 0% 75%,
+        var(--primary-color) 0% 75%,
         var(--background-color) 75% 100%
     );
     position: relative;
@@ -226,4 +226,29 @@
 #groceries-percentage-value{
     background-color: var(--success-color);
     width: 45%;
+}
+.main-cards-container-bottom{
+    display: grid;
+    grid-template-columns: /*repeat(auto-fit,minmax(270px,1fr))*/ 1fr 1fr;
+}
+.secondary-main-card-title-layout{
+    font-family: var(--secondary-font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.secondary-main-card-title-layout h4{
+    font-size: 18px;
+    font-weight: 700;
+}
+.secondary-main-card-title-layout .view-all-link{
+    font-size: 13px;
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: var(--general-transition);
+    cursor: pointer;
+}
+.secondary-main-card-title-layout .view-all-link:hover{
+    background-color: var(--primary-hover-color);
 }
