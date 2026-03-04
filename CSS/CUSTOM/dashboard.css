@@ -223,13 +223,14 @@
     background-color: var(--primary-color);
     width: 85%;
 }
-#groceries-percentage-value{
+#food-percentage-value{
     background-color: var(--success-color);
     width: 45%;
 }
 .main-cards-container-bottom{
     display: grid;
     grid-template-columns: /*repeat(auto-fit,minmax(270px,1fr))*/ 1fr 1fr;
+    gap: 20px;
 }
 .secondary-main-card-title-layout{
     font-family: var(--secondary-font);
@@ -250,5 +251,104 @@
     cursor: pointer;
 }
 .secondary-main-card-title-layout .view-all-link:hover{
-    background-color: var(--primary-hover-color);
+    background-color: var(--secondary-color);
 }
+
+.dashboard-default-list-display-layout{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.recent-transactions-container{
+    margin-top: 20px;
+    gap: 30px;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list-item-left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.list-item-icon{
+    font-size: 23px;
+    padding: 10px;
+}
+.recent-transaction-icon{
+    border-radius: 10px;
+    background-color: rgb(59, 59, 12);
+    color: yellow;
+}
+.list-item-info{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--secondary-font);
+    gap: 5px;
+}
+.list-item-info{
+    font-weight: 500;
+}
+.list-item-description{
+    font-size: 14px;
+    font-weight: 700;
+}
+.list-item-additional-info{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-text-color);
+    gap: 6px;
+    font-weight: 500;
+}
+.list-item .fa-circle{
+    font-size: 4px;
+    margin-top: 2px;
+}
+.list-item-right{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+}
+.debit-transaction{
+    color: var(--danger-color);
+    font-family: var(--secondary-font);
+}
+.list-item-amount{
+    font-size: 14px;
+    font-weight: 700;
+}
+.recent-transaction-status{
+    font-family: var(--secondary-font);
+    border-radius: 20px;
+    color: var(--secondary-text-color);
+    font-size: 12px;
+}
+
+.no-of-pending-bills{
+    font-size: 13px;
+    color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    align-items: center;
+    font-weight: 700;
+}
+
+.upcoming-bills-container{
+    margin-top: 20px;
+}
+.upcoming-bill{
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: var(--general-border);
+}
+.upcoming-bill-icon{
+    border-radius: 200px;
+}
+
+

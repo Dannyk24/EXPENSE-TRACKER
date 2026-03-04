@@ -99,7 +99,7 @@
             </div>
     </header>
     <main>
-        <section data-section="dashboard">
+        <section data-section="dashboard" class="active-section">
             <div class="summary-cards-container">
                 <div class="dashboard-card summary-card">
                     <h3 class="summary-card-title">Total Balance</h3>
@@ -188,11 +188,11 @@
                             </div>
                             <div class="budget-progress-category-overview">
                                 <div class="top">
-                                    <div class="category-name">Groceries</div>
+                                    <div class="category-name">Food</div>
                                     <div class="category-percentage">42%</div>
                                 </div>
                                 <div class="category-percentage-container">
-                                    <div class="category-percentage-value" id="groceries-percentage-value"></div>
+                                    <div class="category-percentage-value" id="food-percentage-value"></div>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,133 @@
                         </div>
                         <div class="recent-transactions-container dashboard-default-list-display-layout">
                             <div class="recent-transaction list-item">
+                                <div class="recent-transaction-left list-item-left">
+                                    <div class="recent-transaction-icon list-item-icon">
+                                        <i class="fas fa-bag-shopping"></i>
+                                    </div>
+                                    <div class="recent-transaction-info list-item-info">
+                                        <h5 class="recent-transaction-description list-item-description">Apple Store Purchase</h5>
+                                        <p class="recent-transaction-additional-info list-item-additional-info">
+                                            <span class="category">Shopping</span>
+                                            <i class="fas fa-circle"></i>
+                                            <span class="time">2 hours ago</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="recent-transaction-right list-item-right">
+                                    <p class="amount-container list-item-amount">-$199.00</p>
+                                    <div class="recent-transaction-status">completed</div>
+                                </div>
+                            </div>
+                            <div class="recent-transaction list-item">
+                                <div class="recent-transaction-left list-item-left">
+                                    <div class="recent-transaction-icon list-item-icon">
+                                        <i class="fas fa-bag-shopping"></i>
+                                    </div>
+                                    <div class="recent-transaction-info list-item-info">
+                                        <h5 class="recent-transaction-description list-item-description">Apple Store Purchase</h5>
+                                        <p class="recent-transaction-additional-info list-item-additional-info">
+                                            <span class="category">Shopping</span>
+                                            <i class="fas fa-circle"></i>
+                                            <span class="time">2 hours ago</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="recent-transaction-right list-item-right">
+                                    <p class="amount-container list-item-amount">-$199.00</p>
+                                    <div class="recent-transaction-status">completed</div>
+                                </div>
+                            </div>
+                            <div class="recent-transaction list-item">
+                                <div class="recent-transaction-left list-item-left">
+                                    <div class="recent-transaction-icon list-item-icon">
+                                        <i class="fas fa-bag-shopping"></i>
+                                    </div>
+                                    <div class="recent-transaction-info list-item-info">
+                                        <h5 class="recent-transaction-description list-item-description">Apple Store Purchase</h5>
+                                        <p class="recent-transaction-additional-info list-item-additional-info">
+                                            <span class="category">Shopping</span>
+                                            <i class="fas fa-circle"></i>
+                                            <span class="time">2 hours ago</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="recent-transaction-right list-item-right">
+                                    <p class="amount-container list-item-amount">-$199.00</p>
+                                    <div class="recent-transaction-status">completed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="dashboard-card main-card">
+                        <div class="secondary-main-card-title-layout">
+                            <h4 class="title">Upcoming Bills</h4>
+                            <span class="no-of-pending-bills">
+                                <span>3</span>
+                                pending
+                            </span>
+                        </div>
+                        <div class="dashboard-default-list-display-layout upcoming-bills-container">
+                            <div class="list-item upcoming-bill">
+                                <div class="list-item-left">
+                                    <div class="list-item-icon upcoming-bill-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div class="list-item-info upcoming-bill-info">
+                                        <div class="list-item-description upcoming-bill-description">
+                                            Netfilx Subscription
+                                        </div>
+                                        <div class="list-item-additional-info upcoming-bill-additional-info">
+                                            <span class="category">Due in 3 days</span>
+                                            <i class="fas fa-circle"></i>
+                                            <span class="time">Oct 18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-item-right">
+                                    <p class="amount-container list-item-amount">$52.99</p>
+                                </div>
+                            </div>
+                            <div class="list-item upcoming-bill">
+                                <div class="list-item-left">
+                                    <div class="list-item-icon upcoming-bill-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div class="list-item-info upcoming-bill-info">
+                                        <div class="list-item-description upcoming-bill-description">
+                                            Netfilx Subscription
+                                        </div>
+                                        <div class="list-item-additional-info upcoming-bill-additional-info">
+                                            <span class="category">Due in 3 days</span>
+                                            <i class="fas fa-circle"></i>
+                                            <span class="time">Oct 18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-item-right">
+                                    <p class="amount-container list-item-amount">$52.99</p>
+                                </div>
+                            </div>
+                            <div class="list-item upcoming-bill">
+                                <div class="list-item-left">
+                                    <div class="list-item-icon upcoming-bill-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div class="list-item-info upcoming-bill-info">
+                                        <div class="list-item-description upcoming-bill-description">
+                                            Netfilx Subscription
+                                        </div>
+                                        <div class="list-item-additional-info upcoming-bill-additional-info">
+                                            <span class="category">Due in 3 days</span>
+                                            <i class="fas fa-circle"></i>
+                                            <span class="time">Oct 18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-item-right">
+                                    <p class="amount-container list-item-amount">$52.99</p>
+                                </div>
                             </div>
                         </div>
                     </div>
