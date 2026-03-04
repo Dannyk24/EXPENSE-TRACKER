@@ -12,4 +12,15 @@ export function setActiveTab(tabName){
             section.dataset.section === tabName
         )
     })
+    saveActiveTab(tabName)
 }
+
+/*HELPERS*/
+function saveActiveTab(tabName){
+    sessionStorage.setItem('active-tab', tabName)
+}
+export function getActiveTab(){
+    return sessionStorage.getItem('active-tab') || 'dashboard'
+}
+
+
