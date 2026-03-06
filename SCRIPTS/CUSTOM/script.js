@@ -11,4 +11,3 @@ navigationPanel.addEventListener('click',(e)=>{
     setActiveTab(tabName)
 })
 setActiveTab(getActiveTab()) /*uses session storage to return the last active tab when a user refreshes(persistence) or returns 'dashboard' on page load*/
-
