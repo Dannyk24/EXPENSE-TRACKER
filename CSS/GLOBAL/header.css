@@ -54,9 +54,6 @@ header{
 .search-bar-container input:focus{
     outline: 1px solid var(--primary-color);
 }
-.header-right{
-
-}
 
 .header-right .fa-bell{
     padding: 10px 18px;

@@ -10,3 +10,89 @@
     color: var(--secondary-text-color);
     font-family: var(--secondary-font);
 }
+.filters-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.filters-container-left{
+    gap: 20px;
+}
+.filters-container-left,.filters-container-right{
+    display: flex;
+    align-items: center;
+}
+.filter-container,.filter-select{
+    padding: 10px;
+    background-color: var(--primary-hover-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter-select{
+    border: none;
+    color: white;
+}
+.filter-select:focus{
+    outline: none;
+}
+.filter-container select, .filter-container input{
+    background: transparent;
+    border: none;
+    color: inherit;
+    padding-left: 5px;
+    cursor: pointer;
+}
+.filter-container select{
+    width: 100%;
+    height: 100%;
+}
+.filter-container i{
+    position: absolute;
+    font-size: 10px;
+    right: 10px;
+}
+.filter-container input::placeholder{
+    color: inherit;
+    opacity: 1;
+}
+.filter-container input:focus{
+    outline: none;
+}
+.filter-select option{
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+}
+.active-filter{
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.date-range-outer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.clear-calendar-btn{
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color);
+    border-radius: 7px;
+    font-size: 13px;
+    position: absolute;
+    color: var(--primary-text-color);
+    top: 50px;
+    cursor: pointer;
+    transition: var(--general-transition);
+}
+.clear-calendar-btn:hover{
+    background-color: var(--secondary-color);
+    outline: var(--general-border);
+}
+
+

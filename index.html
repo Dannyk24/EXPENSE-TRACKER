@@ -343,6 +343,43 @@
         <section data-section="transactions">
             <h2 class="section-title">History</h2>
             <p class="section-sub-title">Manage and track your recent financial activities</p>
+            <div class="filters-container">
+                <div class="filters-container-left">
+                    <div class="date-range-outer-container">
+                        <div class="filter-container filter-select" id="date-range-container">
+                            <i class="fas fa-calendar"></i>
+                            <input type="text" id="date-range-input" placeholder="All" class="filter-input">
+                        </div>
+                        <button class="clear-calendar-btn">Clear calendar</button>
+                    </div>
+                    <div>
+                        <select name="" id="category-filter" class="filter-select filter-input">
+                            <option value="All" selected>All</option>
+                            <option value="food">Food</option>
+                            <option value="income">Income</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="bills">Bills</option>
+                            <option value="entertainment">Entertainment</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="" id="method-filter" class="filter-select filter-input">
+                            <option value="All" selected>All</option>
+                            <option value="debit">Debit</option>
+                            <option value="credit">Credit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filters-container-right">
+                    <div>
+                        <select name="" id="sort-transactions" class="filter-select filter-input">
+                            <option value="All" selected>All</option>
+                            <option value="oldest-first">Oldest first</option>
+                            <option value="newest-first">Newest first</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section data-section="budgets">
@@ -370,7 +407,8 @@
     <!--CHART.JS LIBRARY-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
     <!--LOCAL SCRIPTS-->
-    <script type="module" src="SCRIPTS/CUSTOM/script.js"></script>
+    <script type="module" src="SCRIPTS/CUSTOM/script.js" defer></script>
 </body>
 </html>
