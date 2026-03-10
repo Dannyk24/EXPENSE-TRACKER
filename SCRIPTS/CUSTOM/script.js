@@ -28,6 +28,3 @@ calendarContainer.addEventListener('click',()=>{
 clearCalendarBtn.addEventListener('click',()=>{
     calendar.clear()
 })
-
-
-

@@ -129,38 +129,6 @@ section{
     color: white;
 }
 
-/*TomSelect library styles.......Use !important after a style to increase specificity*/
-.ts-wrapper{
-    font-family: var(--secondary-font);
-}
-.ts-control{
-    background-color: transparent;
-    border: none;
-}
-.ts-control input{
-    background-color: transparent;
-}
-#category-filter-control:focus{
-    background-color: red;
-}
-
-.ts-wrapper .ts-dropdown{
-    background: none;
-    border-radius: 7px;
-    background-color: var(--secondary-color);
-}
-.ts-wrapper .ts-dropdown .ts-dropdown-content{
-    background: none;
-    background-color: var(--secondary-color);
-}
-.ts-dropdown-content .option{
-    color: var(--primary-text-color);
-    background-color: var(--secondary-color);
-}
-.ts-dropdown-content .active{
-    color: var(--primary-text-color);
-    background-color: var(--secondary-color);
-}
 /*
 Media Queries
 First Breakpoint: 1024px
