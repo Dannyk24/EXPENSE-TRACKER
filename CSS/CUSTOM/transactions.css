@@ -167,6 +167,7 @@ td{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 .transaction-method span{
     background-color: var(--secondary-color);
@@ -176,21 +177,21 @@ td{
     font-size: 12px;
     font-weight: 700;
 }
-.transaction-action-toggle{
-    position: absolute;
-    right: 2px;
+.transaction-actions-toggle{
     font-size: 12px;
     transition: var(--general-transition);
     border-radius: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 10px;
     cursor: pointer;
     color: var(--secondary-text-color);
+    padding: 8px 16px;
+    border-radius: 200px;
 }
-.transaction-action-toggle:hover{
+.transaction-actions-toggle:hover{
     color: var(--primary-text-color);
+    background-color: var(--secondary-color);
 }
 .transaction-actions-container{
     position: absolute;
@@ -247,7 +248,7 @@ td{
     align-items: center;
 }
 .bottom-section p{
-    font-size: 14px;
+    font-size: 13px;
     color: var(--secondary-text-color);
 }
 .table-control-container{
@@ -268,9 +269,11 @@ td{
     justify-content: center;
     transition: var(--general-transition);
     cursor: pointer;
+    outline: none;
 }
 .control-arrows:hover{
     background-color: var(--surface-color);
+    outline: var(--general-border);
 }
 .section-number{
     padding: 6px 12px;
