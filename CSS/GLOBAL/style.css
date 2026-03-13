@@ -69,6 +69,19 @@ section{
     padding-bottom: 130px;
 }
 
+.section-title{
+    font-family: var(--primary-font);
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+.section-sub-title{
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    font-family: var(--secondary-font);
+}
+
 /*Flatpickr library styles.......Use !important after a style to increase specificity*/
 .flatpickr-calendar{
     background-color: var(--secondary-color);

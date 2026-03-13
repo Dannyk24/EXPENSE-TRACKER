@@ -360,6 +360,8 @@
                             <option value="shopping">Shopping</option>
                             <option value="bills">Bills</option>
                             <option value="entertainment">Entertainment</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
                     <div>
@@ -461,7 +463,115 @@
         </section>
 
         <section data-section="budgets">
-            Budgets Tab
+            <div class="budget-top-container">
+                <div class="left">
+                    <h2 class="section-title">Budget Goals & Tracking</h2>
+                    <p class="section-sub-title">Monitor your monthly spending limits and optimize your financial health</p>
+                </div>
+                <div class="right">
+                    <div class="primary-button">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Set New Budget</span>
+                    </div>
+                </div>
+            </div>
+            <div class="budget-section-cards">
+                <div class="budget-section-top">
+                    <div class="budget-section-card top-cards">
+                        <p class="top-card-subtitle">TOTAL BUDGET</p>
+                        <span class="top-card-amount">$4,200</span>
+                    </div>
+                    <div class="budget-section-card top-cards">
+                        <p class="top-card-subtitle">TOTAL SPENT</p>
+                        <span class="top-card-amount">$2,840</span>
+                    </div>
+                    <div class="budget-section-card top-cards">
+                        <p class="top-card-subtitle">REMAINING</p>
+                        <span class="top-card-amount">$1,360</span>
+                    </div>
+                </div>
+
+                <div class="budget-section-bottom">
+                    <div class="budget-section-card bottom-cards">
+                        <i class="edit-icon fas fa-pencil"></i>
+                        <div class="bottom-card-icon"><i class="fas fa-utensils"></i></div>
+                        <p class="bottom-card-category">Food & Dining</p>
+                        <div class="amount-spent-container">
+                            <p>$450 of $600 spent</p>
+                            <span>75%</span>
+                        </div>
+                        <div class="percentage-container">
+                            <div class="budget-percentage" id="food-budget"></div>
+                        </div>
+                        <p class="amount-remaining">$150 remaining for meals</p>
+                    </div>
+                    <div class="budget-section-card bottom-cards">
+                        <i class="edit-icon fas fa-pencil"></i>
+                        <div class="bottom-card-icon"><i class="fas fa-video"></i></div>
+                        <p class="bottom-card-category">Entertainment</p>
+                        <div class="amount-spent-container">
+                            <p>$120 of $300 spent</p>
+                            <span>40%</span>
+                        </div>
+                        <div class="percentage-container">
+                            <div class="budget-percentage" id="entertainment-budget"></div>
+                        </div>
+                        <p class="amount-remaining">$180 remaining for fun</p>
+                    </div>
+                    <div class="budget-section-card bottom-cards">
+                        <i class="edit-icon fas fa-pencil"></i>
+                        <div class="bottom-card-icon"><i class="fas fa-car"></i></div>
+                        <p class="bottom-card-category">Transaportation</p>
+                        <div class="amount-spent-container">
+                            <p>$310 of $400 spent</p>
+                            <span>77%</span>
+                        </div>
+                        <div class="percentage-container">
+                            <div class="budget-percentage" id="transportation-budget"></div>
+                        </div>
+                        <p class="amount-remaining">$80 remaining for travel</p>
+                    </div>
+                    <div class="budget-section-card bottom-cards">
+                        <i class="edit-icon fas fa-pencil"></i>
+                        <div class="bottom-card-icon"><i class="fas fa-bag-shopping"></i></div>
+                        <p class="bottom-card-category">Shopping</p>
+                        <div class="amount-spent-container">
+                            <p>$560 of $500 spent</p>
+                            <span class="over-budget-percentage-text">112%</span>
+                        </div>
+                        <div class="percentage-container">
+                            <div class="budget-percentage over-budget-percentage" id="shopping-budget"></div>
+                        </div>
+                        <p class="amount-remaining over-budget-amount-remaining">Over budget by $60</p>
+                    </div>
+                    <div class="budget-section-card bottom-cards">
+                        <i class="edit-icon fas fa-pencil"></i>
+                        <div class="bottom-card-icon"><i class="fas fa-bolt"></i></div>
+                        <p class="bottom-card-category">Bills</p>
+                        <div class="amount-spent-container">
+                            <p>$1200 of $1500 spent</p>
+                            <span>80%</span>
+                        </div>
+                        <div class="percentage-container">
+                            <div class="budget-percentage" id="bills-budget"></div>
+                        </div>
+                        <p class="amount-remaining">$300 remaining for bills</p>
+                    </div>
+                    <div class="budget-section-card bottom-cards">
+                        <i class="edit-icon fas fa-pencil"></i>
+                        <div class="bottom-card-icon"><i class="fas fa-infinity"></i></div>
+                        <p class="bottom-card-category">Other</p>
+                        <div class="amount-spent-container">
+                            <p>$200 of $400 spent</p>
+                            <span>50%</span>
+                        </div>
+                        <div class="percentage-container">
+                            <div class="budget-percentage" id="other-budget"></div>
+                        </div>
+                        <p class="amount-remaining">$200 remaining for other expenses</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section data-section="settings">
