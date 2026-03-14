@@ -17,6 +17,7 @@
     --primary-font: montserrat, arial;
     --secondary-font: inter, sans-serrif;
     --general-transition: all 0.2s ease-in-out;
+    --secondary-border: 1px solid #8b5cf6;
 }
 
 *{
@@ -66,8 +67,54 @@ section{
     width: 100%;
     height: 100%;
     translate: 0 0px;
-    padding-bottom: 130px;
+    padding-bottom: 40px;
 }
+/*----CTA STYLES----*/
+.primary-button{
+    display: flex;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    justify-content: start;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: var(--general-transition);
+    box-shadow: var(--general-shadow);
+    border: none;
+    color: var(--primary-text-color);    
+}
+.primary-button:hover{
+    background-color: var(--secondary-hover-color);
+}
+
+.secondary-button{
+    display: flex;
+    padding: 10px 15px;
+    background: none;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    justify-content: start;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: var(--general-transition);
+    border: none;
+    color: var(--primary-text-color);
+    border: var(--secondary-border);
+}
+.secondary-button:hover{
+    background-color: var(--secondary-color);
+}
+
+
 
 .section-title{
     font-family: var(--primary-font);
