@@ -1,0 +1,95 @@
+.settings-group-cards-container{
+    margin-top: 30px;
+}
+.settings-group-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--surface-color);
+    border-radius: 20px;
+    font-family: var(--secondary-font);
+}
+.settings-group-header-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+.settings-language-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+}
+.settings-language-container label{
+    font-size: 13px;
+}
+.settings-language-container select{
+    width: fit-content;
+    background: none;
+    margin-top: 7px;
+    border: none;
+    padding: 10px 8px;
+    padding-right: 100px;
+    border-radius: 8px;
+    border: var(--secondary-border);
+    color: white;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+}
+.settings-language-container select:focus{
+    outline: none;
+}
+.settings-language-container select option{
+    color: white;
+    background-color: var(--secondary-color);
+}
+.setting-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.setting-description{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.setting-title{
+    font-size: 18px;
+    font-family: var(--primary-font);
+    font-weight: 700;
+}
+.setting-sub-title{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--secondary-text-color);
+}
+.setting-toggle-container{
+    width: 40px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: var(--background-color);
+    position: relative;
+    cursor: pointer;
+    transition: var(--general-transition);
+}
+.toggle-ball{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 20px;
+    border-radius: 200px;
+    background-color: var(--primary-color);
+    right: 0;
+}
+.toggle-active{
+    background-color: var(--primary-color)
+}
+.toggle-active .toggle-ball{
+    left: 20px;
+    background-color: var(--accent-color);
+}
