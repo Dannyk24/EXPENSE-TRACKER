@@ -1,5 +1,8 @@
 .settings-group-cards-container{
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .settings-group-card{
     width: 100%;
@@ -18,11 +21,26 @@
     font-size: 20px;
     font-family: var(--secondary-font);
     font-weight: 700;
+    margin-bottom: 10px;
+}
+.setting-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.setting-left i{
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+    color: var(--primary-color);
+    font-size: 18px;
 }
 .settings-language-container{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
     gap: 5px;
 }
 .settings-language-container label{
@@ -52,6 +70,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 .setting-description{
     display: flex;
@@ -92,4 +111,13 @@
 .toggle-active .toggle-ball{
     left: 20px;
     background-color: var(--accent-color);
+}
+.delete-data-btn{
+    background-color: var(--danger-color);
+    box-shadow: none;
+    transition: var(--general-transition);
+}
+.delete-data-btn:hover{
+    opacity: 0.6;
+    background-color: var(--danger-color);
 }
