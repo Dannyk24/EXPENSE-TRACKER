@@ -92,7 +92,7 @@
 .bottom-cards .percentage-container{
     width: 100%;
     background-color: var(--background-color);
-    height: 5px;
+    height: 6px;
     border-radius: 10px;
     position: relative;
 }
