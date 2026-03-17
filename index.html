@@ -74,8 +74,8 @@
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="user-info">
-                        <p class="username">John Doe</p>
-                        <div class="user-email">john@example.com</div>
+                        <p class="username sidebar-username">John Doe</p>
+                        <div class="user-email sidebar-email">john@example.com</div>
                     </div>
                     <div class="navigation">
                         <i class="fas fa-ellipsis-v"></i>
@@ -685,18 +685,18 @@
                         <i class="fas fa-user"></i>
                         <span>Personal Information</span>
                     </h2>
-                    <form action="#">
+                    <form action="#" id="personal-information-form">
                         <div class="input-field-container">
                             <label for="name">Full Name</label>
-                            <input type="text" name="" id="" value="John Doe">
+                            <input type="text" name="" id="user-name-input" value="John Doe" class="personal-information-form-input">
                         </div>
                         <div class="input-field-container">
                             <label for="name">Email Address</label>
-                            <input type="text" name="" id="" value="john@example.com">
+                            <input type="text" name="" id="user-email-input" value="john@example.com" class="personal-information-form-input">
                         </div>
                         <div class="input-field-container">
                             <label for="name">Phone Number</label>
-                            <input type="text" name="" id="" value="09013151297">
+                            <input type="text" name="" id="user-phone-input" value="09013151297" class="personal-information-form-input">
                         </div>
                         <button type="submit" class="save-form-changes third-button">Save Profile Changes</button>
                     </form>

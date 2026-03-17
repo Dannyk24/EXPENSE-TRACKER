@@ -11,7 +11,8 @@
     pointer-events: none;
     background: transparent;
     backdrop-filter: blur(15px);
-    translate: 0 -20px;
+    translate: 30px 0;
+    transition: all 0.3s ease-in-out;
 }
 .success-toast{
     border: 2px solid var(--success-color);
