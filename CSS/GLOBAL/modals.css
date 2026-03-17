@@ -1,0 +1,115 @@
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+.overlay-active{
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+    pointer-events: all;
+}
+
+.form-modal{
+    position: fixed;
+    top: 50px;
+    left: 440px;
+    z-index: 100;
+    display: none;
+}
+.modal-active{
+    display: block;
+    margin: 0 auto;
+}
+.form-modal form{
+    background-color: var(--surface-color);
+    padding: 20px;
+    font-family: var(--secondary-font);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.form-modal form::-webkit-scrollbar{
+    background-color: none;
+    width: 3px;
+    display: none;
+}
+.form-modal form::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+.modal-header{
+    font-size: 21px;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    color: var(--primary-color);
+}
+.form-modal-input-field-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-modal-input-field-group label{
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.form-modal-input-field-group select, textarea{
+    background: none;
+    border: none;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    width: 350px;
+}
+.form-modal-input-field-group input{
+    background: none;
+    border: none;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    width: 350px;
+}
+.form-modal-input-field-group input::-webkit-inner-spin-button{
+    display: none;
+}
+
+.form-modal-input-field-group textarea{
+    padding: 20px;
+    resize: none;
+    height: 100px;
+    padding-top: 15px;
+}
+
+.form-modal-input-field-group select:focus{
+    outline: none;
+    outline: 2px solid var(--primary-color);
+}
+.form-modal-input-field-group input:focus{
+    outline: none;
+    outline: 2px solid var(--primary-color);
+}
+.form-modal-input-field-group textarea:focus{
+    outline: none;
+    outline: 2px solid var(--primary-color);
+}
+#add-new-budget-modal form{
+    height: fit-content;
+}
+#edit-budget-modal form{
+    height: fit-content;
+}
