@@ -17,11 +17,19 @@
     top: 50px;
     left: 440px;
     z-index: 100;
-    display: none;
+    pointer-events: none;
+    height: 10px;
+    opacity: 0;
+    translate: 0 -20px;
+    transition: all 0.3s ease-in-out;
 }
 .modal-active{
     display: block;
     margin: 0 auto;
+    pointer-events: all;
+    height: fit-content;
+    opacity: 1;
+    translate: 0 0;
 }
 .form-modal form{
     background-color: var(--surface-color);
@@ -35,6 +43,26 @@
     height: 500px;
     overflow: scroll;
     overflow-x: hidden;
+    position: relative;
+}
+.modal-close-btn{
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    padding: 10px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-text-color);
+    border-radius: 200px;
+    cursor: pointer;
+    font-size: 15px;
+    opacity: 0.8;
+    transition: var(--general-transition);
+}
+.modal-close-btn:hover{
+    background-color: var(--primary-hover-color);
+    opacity: 1;
 }
 .form-modal form::-webkit-scrollbar{
     background-color: none;
@@ -73,6 +101,9 @@
     color: white;
     padding: 0px 10px 0px 10px;
     width: 350px;
+}
+.form-modal-input-field-group select{
+    cursor: pointer;
 }
 .form-modal-input-field-group input{
     background: none;

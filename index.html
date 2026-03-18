@@ -94,7 +94,7 @@
             </div>
             <div class="header-right">
                 <i class="fas fa-bell"></i>
-                <div class="primary-button">
+                <div class="primary-button open-form-btns" id="add-new-transaction-btn" data-modal="add-new-transaction-modal">
                     <i class="fas fa-plus"></i>
                     <span>New Transaction</span>
                 </div>
@@ -471,7 +471,7 @@
                     <p class="section-sub-title">Monitor your monthly spending limits and optimize your financial health</p>
                 </div>
                 <div class="right">
-                    <div class="primary-button">
+                    <div class="primary-button open-form-btns" data-modal="add-new-budget-modal">
                         <i class="fas fa-plus-circle"></i>
                         <span>Set New Budget</span>
                     </div>
@@ -708,6 +708,9 @@
         <!--Add new transation form modal-->
         <div class="form-modal" id="add-new-transaction-modal">
             <form action="#" id="add-new-transaction-form">
+                <div class="modal-close-btn">
+                    <i class="fas fa-x"></i>
+                </div>
                 <h2 class="modal-header">
                     <i class="fas fa-receipt"></i>
                     <span>Add New Transaction</span>
@@ -746,6 +749,9 @@
         <!--Edit transaction form modal-->
         <div class="form-modal" id="edit-transaction-modal">
             <form action="#" id="edit-transaction-form">
+                <div class="modal-close-btn">
+                    <i class="fas fa-x"></i>
+                </div>
                 <h2 class="modal-header">
                     <i class="fas fa-pen"></i>
                     <span>Edit Transaction</span>
@@ -786,6 +792,9 @@
         <!--Add new budget form modal-->
         <div class="form-modal" id="add-new-budget-modal">
             <form action="#" id="add-new-budget-form">
+                <div class="modal-close-btn">
+                    <i class="fas fa-x"></i>
+                </div>
                 <h2 class="modal-header">
                     <i class="fas fa-circle-notch"></i>
                     <span>Add New Budget</span>
@@ -813,6 +822,9 @@
         <!--Edit budget form-->
         <div class="form-modal" id="edit-budget-modal">
             <form action="#" id="edit-budget-form">
+                <div class="modal-close-btn">
+                    <i class="fas fa-x"></i>
+                </div>
                 <h2 class="modal-header">
                     <i class="fas fa-pen"></i>
                     <span>Edit Budget</span>
@@ -853,7 +865,6 @@
         </div>
     </main>
     <div class="overlay"></div>
-
 
 
 

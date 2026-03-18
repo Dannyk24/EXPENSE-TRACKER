@@ -32,18 +32,52 @@ clearCalendarBtn.addEventListener('click',()=>{
 /*User Profile Script*/
 const submitFormDataBtn = document.querySelector('.save-form-changes')
 
+
+/*=====HELPERS====*/
+function getUserObject(){
+    const user = JSON.parse(localStorage.getItem('user')) || {
+        username:'John Doe',
+        email: 'john@example.com',
+        phone: '09013151297'
+    }
+    return user
+}
+function saveUserObject(user){
+    localStorage.setItem('user',JSON.stringify(user))
+}
+
+function renderProfileSection(user){
+    const userProfileNameElem = document.querySelector('.user-profile-username')
+    const userProfileEmailElem = document.querySelector('.user-profile-user-email')
+    userProfileNameElem.textContent = user.username
+    userProfileEmailElem.textContent = user.email
+}
+function renderSideBarSection(user){
+    const sidebarUsername = document.querySelector('.sidebar-username')
+    const sidebarEmail = document.querySelector('.sidebar-email')
+    sidebarUsername.textContent = user.username
+    sidebarEmail.textContent = user.email
+}
+
+
 const formInputs = document.querySelectorAll('.personal-information-form-input')
 formInputs.forEach(input=>{
-    input.addEventListener('input',()=>{
-        if(input.value!== ''){
-            submitFormDataBtn.classList.add('third-button-active')
-            return
-        }
-        submitFormDataBtn.classList.remove('third-button-active')
-    })
+    togglSubmitBtnClasslist(input)
 })
+function togglSubmitBtnClasslist(input){
+    if(input.value!== ''){
+        submitFormDataBtn.classList.add('third-button-active')
+        return
+    }
+    submitFormDataBtn.classList.remove('third-button-active')
+}
+
+
 
 submitFormDataBtn.addEventListener('click',(e)=>{
+    handleSubmitBtnLogic(e)
+})
+function handleSubmitBtnLogic(e){
     e.preventDefault()
     if(!submitFormDataBtn.classList.contains('third-button-active')){
         return
@@ -56,10 +90,11 @@ submitFormDataBtn.addEventListener('click',(e)=>{
         email,
         phone
     }
-    localStorage.setItem('user',JSON.stringify(user))
+    saveUserObject(user)
     notify('success','User profile updated')
     renderUserProfile()
-})
+}
+
 
 
 let notifyTimeoutInterval;
@@ -80,27 +115,62 @@ function notify(type,notifyMessage){
     },3500)
 }
 
+
 function renderUserProfile(){
-    const user = JSON.parse(localStorage.getItem('user')) || {
-        username:'John Doe',
-        email: 'john@example.com',
-        phone: '09013151297'
-    }
+    const user = getUserObject()
     /*Profile section elements*/
-    const userProfileNameElem = document.querySelector('.user-profile-username')
-    const userProfileEmailElem = document.querySelector('.user-profile-user-email')
-    userProfileNameElem.textContent = user.username
-    userProfileEmailElem.textContent = user.email
-
+    renderProfileSection(user)    
     /*Sidebar Elements*/
-    const sidebarUsername = document.querySelector('.sidebar-username')
-    const sidebarEmail = document.querySelector('.sidebar-email')
-    sidebarUsername.textContent = user.username
-    sidebarEmail.textContent = user.email
-
+    renderSideBarSection(user)
     /*Change input field values to user profile values*/
     document.querySelector('#user-name-input').value = user.username
     document.querySelector('#user-email-input').value = user.email
     document.querySelector('#user-phone-input').value  = user.phone
 }
 renderUserProfile()
+
+
+/*CTA,FORMS,MODALS LOGIC*/
+const overlay = document.querySelector('.overlay')
+const modals = document.querySelectorAll('.form-modal')
+const modalsArray = Array.from(modals)/*Convert modals nodelist to array to gain access to methods such as arr.find()*/
+const modalCloseBtns = document.querySelectorAll('.modal-close-btn')
+const openFormButtons = document.querySelectorAll('.open-form-btns')
+let activeModal; /*Save active modal element in global scope*/
+
+/*=====HELPERS=====*/
+function openOverlay(){
+    overlay.classList.add('overlay-active')
+    document.body.style.overflow = 'hidden'/*Stop scrolling on page once overlay is open*/
+}
+function closeOverlay(){
+    overlay.classList.remove('overlay-active')
+    document.body.style.overflow = 'auto' /*Return page scrolling back to normal*/
+}
+function openModal(modal){
+    activeModal = modalsArray.find(m=>m.getAttribute('id') === modal)
+    activeModal.classList.add('modal-active')
+}
+function closeModal(modal){
+    activeModal = modalsArray.find(m=>m.getAttribute('id') === modal)
+    activeModal.classList.remove('modal-active')
+}
+
+
+openFormButtons.forEach(button=>{
+    button.addEventListener('click',()=>{
+        openOverlay()
+        openModal(button.dataset.modal) /*Pass modal data attribute as arguement into openModal function*/
+    })
+})
+overlay.addEventListener('click',()=>{
+    closeOverlay()
+    closeModal(activeModal.getAttribute('id'))/*Close modal using active modal's id value when user clicks overlay and modal close button*/
+})
+
+modalCloseBtns.forEach(btn=>{ /*For each modal close button close overlay and close active modal*/
+    btn.addEventListener('click',()=>{
+        closeOverlay()
+        closeModal(activeModal.getAttribute('id'))
+    })
+})
