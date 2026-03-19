@@ -79,6 +79,7 @@
 .bottom-card-category{
     font-size: 18px;
     font-weight: 700;
+    text-transform: capitalize;
 }
 .bottom-cards .amount-spent-container{
     display: flex;

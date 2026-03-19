@@ -1,6 +1,6 @@
 
-export function debounce(callback,time){
-    let timeoutId
+export function debounceFunction(callback,time){
+    let timeoutId;
     return function(...args){
         clearTimeout(timeoutId)
         timeoutId = setTimeout(()=>{

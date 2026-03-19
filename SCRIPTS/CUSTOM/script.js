@@ -1,5 +1,6 @@
 import { setActiveTab,getActiveTab } from "../../UTILS/navigation.js"
-import { debounce } from "../../UTILS/performace.js"
+import { debounceFunction } from "../../UTILS/performace.js"
+import { budgets } from "../../DATA/budgets.js"
 
 const navigationPanel = document.querySelector('.navigation-panel')
 navigationPanel.addEventListener('click',(e)=>{
@@ -28,6 +29,47 @@ calendarContainer.addEventListener('click',()=>{
 clearCalendarBtn.addEventListener('click',()=>{
     calendar.clear()
 })
+
+
+
+/*BUDGETS SECTION SCRIPT*/
+const budgetsContainer = document.querySelector('.budget-section-bottom')
+let budgetsHTML = ''
+function renderBudgets(){
+    budgetsContainer.innerHTML = ''
+    budgetsHTML = ''
+    budgets.forEach(budget=>{
+        let budgetHTML = `
+        <div class="budget-section-card bottom-cards" data-category = "${budget.category}">
+            <i class="edit-icon fas fa-pencil open-form-btns" data-modal = "edit-budget-modal"></i>
+            <div class="bottom-card-icon"><i class="fas fa-utensils"></i></div>
+            <p class="bottom-card-category">${budget.category}</p>
+            <div class="amount-spent-container">
+                <p>$450 of $${budget.amount} spent</p>
+                <span>75%</span>
+            </div>
+            <div class="percentage-container">
+                <div class="budget-percentage" id="food-budget"></div>
+            </div>
+            <p class="amount-remaining">$150 remaining for meals</p>
+        </div>        
+        `
+        budgetsHTML+=budgetHTML
+    })
+    budgetsContainer.innerHTML = budgetsHTML
+}
+renderBudgets()
+
+
+
+
+
+
+
+
+
+
+
 
 /*User Profile Script*/
 const submitFormDataBtn = document.querySelector('.save-form-changes')
@@ -63,8 +105,8 @@ function renderSideBarSection(user){
 const formInputs = document.querySelectorAll('.personal-information-form-input')
 formInputs.forEach(input=>{
     input.addEventListener('input',()=>{
-        const debounced = debounce(togglSubmitBtnClasslist,300) /*Debounce function returns a function  that is saved in this variable*/
-        debounced(input)/*The variable becomes the returned function and takes the callbacks paramaters*/
+        const debounce = debounceFunction(togglSubmitBtnClasslist,300) /*Debounce function returns a function  that is saved in this variable*/
+        debounce(input)/*The variable becomes the returned function and takes the callbacks paramaters*/
     })
 })
 
@@ -192,3 +234,6 @@ modalCloseBtns.forEach(btn=>{ /*For each modal close button close overlay and cl
         closeModal(activeModal.getAttribute('id'))
     })
 })
+
+
+
