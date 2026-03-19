@@ -140,8 +140,8 @@ td{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(96, 96, 13);
-    color: yellow;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     border-radius: 10px;
     font-size: 13px;
 }

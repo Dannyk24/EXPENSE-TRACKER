@@ -1,5 +1,5 @@
 import { setActiveTab,getActiveTab } from "../../UTILS/navigation.js"
-
+import { debounce } from "../../UTILS/performace.js"
 
 const navigationPanel = document.querySelector('.navigation-panel')
 navigationPanel.addEventListener('click',(e)=>{
@@ -62,8 +62,12 @@ function renderSideBarSection(user){
 
 const formInputs = document.querySelectorAll('.personal-information-form-input')
 formInputs.forEach(input=>{
-    togglSubmitBtnClasslist(input)
+    input.addEventListener('input',()=>{
+        const debounced = debounce(togglSubmitBtnClasslist,300) /*Debounce function returns a function  that is saved in this variable*/
+        debounced(input)/*The variable becomes the returned function and takes the callbacks paramaters*/
+    })
 })
+
 function togglSubmitBtnClasslist(input){
     if(input.value!== ''){
         submitFormDataBtn.classList.add('third-button-active')
@@ -85,11 +89,26 @@ function handleSubmitBtnLogic(e){
     const username = document.querySelector('#user-name-input').value
     const email = document.querySelector('#user-email-input').value
     const phone = document.querySelector('#user-phone-input').value
+
+    /*Extra check Incase class check method is bypassed*/
+    if(username.trim() === '' || email.trim() === '' || phone.trim() === ''){
+        notify('danger','Invalid user data')
+        return
+    }
+    
     const user = {
         username,
         email,
         phone
     }
+
+    /*Compare old userObject to new one to check for duplicate data,if data is same as old one,notify user and return*/
+    const oldUserObject = JSON.parse(localStorage.getItem('user'))
+    if(oldUserObject.username === user.username && oldUserObject.email === user.email && oldUserObject.phone === user.phone){
+        notify('danger','User already exists')
+        return
+    }
+    /*Create new user object,save it to local storage,notify user,update ui*/
     saveUserObject(user)
     notify('success','User profile updated')
     renderUserProfile()
@@ -97,7 +116,7 @@ function handleSubmitBtnLogic(e){
 
 
 
-let notifyTimeoutInterval;
+
 function notify(type,notifyMessage){
     let toast;
     if(type === 'success'){
@@ -109,7 +128,6 @@ function notify(type,notifyMessage){
     toast.querySelector('.toast-message').textContent = notifyMessage
     toast.classList.add('toast-active')
 
-    clearTimeout(notifyTimeoutInterval)
     notifyTimeoutInterval = setTimeout(()=>{
         toast.classList.remove('toast-active')
     },3500)
