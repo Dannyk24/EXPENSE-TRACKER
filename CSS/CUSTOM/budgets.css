@@ -125,24 +125,6 @@
     opacity: 0.9;
 }
 
-#food-budget{
-    width: 75%;
-}
-#entertainment-budget{
-    width: 40%;
-}
-#transportation-budget{
-    width: 77%;
-}
-#income-budget{
-    width: 64%;
-}
-#bills-budget{
-    width: 80%;
-}
-#other-budget{
-    width: 50%;
-}
 
 .report-container{
     margin-top: 40px;

@@ -104,6 +104,7 @@
     border-radius: 200px;
     background-color: var(--primary-color);
     right: 0;
+    transition: var(--general-transition);
 }
 .toggle-active{
     background-color: var(--primary-color)

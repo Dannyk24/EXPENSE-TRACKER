@@ -50,3 +50,10 @@
 .danger-toast .toast-icon{
     filter: drop-shadow(0px 0px 20px var(--danger-color));
 }
+.alert-toast{
+    border: 2px solid var(--warning-color);
+    color: var(--warning-color);
+}
+.alert-toast .toast-icon{
+    filter: drop-shadow(0px 0px 20px var(--warning-color))
+}

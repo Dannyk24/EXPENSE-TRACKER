@@ -31,35 +31,68 @@ clearCalendarBtn.addEventListener('click',()=>{
 })
 
 
+/*Dashboard Script*/
+const viewAllTransactionsBtn = document.querySelector('.view-all-link')
+viewAllTransactionsBtn.addEventListener('click',()=>{
+    setActiveTab('transactions')
+})
+
 
 /*BUDGETS SECTION SCRIPT*/
 const budgetsContainer = document.querySelector('.budget-section-bottom')
-let budgetsHTML = ''
 function renderBudgets(){
     budgetsContainer.innerHTML = ''
-    budgetsHTML = ''
     budgets.forEach(budget=>{
         let budgetHTML = `
         <div class="budget-section-card bottom-cards" data-category = "${budget.category}">
-            <i class="edit-icon fas fa-pencil open-form-btns" data-modal = "edit-budget-modal"></i>
+            <i class="edit-icon fas fa-pencil open-form-btns edit-budget-btns" data-modal = "edit-budget-modal"></i>
             <div class="bottom-card-icon"><i class="fas fa-utensils"></i></div>
             <p class="bottom-card-category">${budget.category}</p>
             <div class="amount-spent-container">
-                <p>$450 of $${budget.amount} spent</p>
-                <span>75%</span>
+                <p>$0 of $${budget.amount} spent</p>
+                <span class="budget-percentage-number-${budget.category}">0%</span>
             </div>
             <div class="percentage-container">
-                <div class="budget-percentage" id="food-budget"></div>
+                <div class="budget-percentage budget-percentage-${budget.category}" id="food-budget"></div>
             </div>
             <p class="amount-remaining">$150 remaining for meals</p>
         </div>        
         `
-        budgetsHTML+=budgetHTML
+        budgetsContainer.innerHTML += budgetHTML
+        const budgetPercentageNumber = document.querySelector(`.budget-percentage-number-${budget.category}`)
+        const budgetPercentageBar = document.querySelector(`.budget-percentage-${budget.category}`)
+        budgetPercentageBar.style.width = budgetPercentageNumber.textContent
+
+
     })
-    budgetsContainer.innerHTML = budgetsHTML
 }
 renderBudgets()
 
+const editBudgetBtns = document.querySelectorAll('.edit-budget-btns')
+editBudgetBtns.forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+        setEditBudgetModalValues(btn)
+    })
+})
+
+function setEditBudgetModalValues(btn){
+    const budgetCategory = btn.closest('.bottom-cards').dataset.category
+    const activeBudget = budgets.find(budget=>budget.category === budgetCategory)
+    const editBudgetModal = document.querySelector('#edit-budget-modal')
+    const amountFieldInput = editBudgetModal.querySelector('#budget-amount')
+    const categoryFieldSelect = editBudgetModal.querySelector('#budget-category')
+    const categoryOptions = categoryFieldSelect.querySelectorAll('option')
+    categoryOptions.forEach(option=>{
+        const value = option.getAttribute('value')
+        if(value === activeBudget.category){
+            option.setAttribute('selected','')
+        }
+        else{
+            option.removeAttribute('selected','')
+        }
+    })
+    amountFieldInput.value = activeBudget.amount
+}
 
 
 
@@ -147,7 +180,7 @@ function handleSubmitBtnLogic(e){
     /*Compare old userObject to new one to check for duplicate data,if data is same as old one,notify user and return*/
     const oldUserObject = JSON.parse(localStorage.getItem('user'))
     if(oldUserObject.username === user.username && oldUserObject.email === user.email && oldUserObject.phone === user.phone){
-        notify('danger','User already exists')
+        notify('alert','User already exists')
         return
     }
     /*Create new user object,save it to local storage,notify user,update ui*/
@@ -167,10 +200,13 @@ function notify(type,notifyMessage){
     else if(type === 'danger'){
         toast = document.querySelector('.danger-toast')
     }
+    else if(type === 'alert'){
+        toast = document.querySelector('.alert-toast')
+    }
     toast.querySelector('.toast-message').textContent = notifyMessage
     toast.classList.add('toast-active')
 
-    notifyTimeoutInterval = setTimeout(()=>{
+    setTimeout(()=>{
         toast.classList.remove('toast-active')
     },3500)
 }
@@ -237,3 +273,13 @@ modalCloseBtns.forEach(btn=>{ /*For each modal close button close overlay and cl
 
 
 
+/*Settings script*/
+const toggleContainer = document.querySelector('.setting-toggle-container')
+toggleContainer.addEventListener('click',()=>{
+    toggleContainer.classList.toggle('toggle-active')
+})
+
+
+
+
+/*Transactions Script*/

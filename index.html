@@ -759,7 +759,7 @@
                 <div class="form-modal-input-field-group">
                     <label for="category">Category</label>
                     <select name="category" id="budget-category">
-                        <option value="food" selected>Food</option>
+                        <option value="food">Food</option>
                         <option value="income">Income</option>
                         <option value="shopping">Shopping</option>
                         <option value="bills">Bills</option>
@@ -769,6 +769,22 @@
                     </select>
                 </div>
                 <button type="submit" class="form-modal-submit-button third-button">Save All Changes</button>
+            </form>
+        </div>
+
+        <div class="form-modal" id="confirmation-modal">
+            <form action="#">
+                <div class="form-header">Are You Sure You Want To Confirm This Action?</div>
+                <div class="action-buttons-container">
+                    <button type="submit" class="confirm-action action-buttons">
+                        <i class="fas fa-check"></i>
+                        <span>Yes</span>
+                    </button>
+                    <button type="submit" class="cancel-action action-buttons">
+                        <i class="fas fa-x"></i>
+                        <span>NO</span>
+                    </button>
+                </div>
             </form>
         </div>
 
@@ -783,6 +799,13 @@
             <i class="toast-icon fas fa-warning"></i>
             <div class="toast-data">
                 <div class="toast-header">Warning</div>
+                <div class="toast-message">This is the toast message</div>
+            </div>
+        </div>
+        <div class="toast alert-toast">
+            <i class="toast-icon fas fa-exclamation"></i>
+            <div class="toast-data">
+                <div class="toast-header">Alert</div>
                 <div class="toast-message">This is the toast message</div>
             </div>
         </div>
