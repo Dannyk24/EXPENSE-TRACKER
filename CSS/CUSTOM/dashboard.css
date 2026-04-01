@@ -229,7 +229,7 @@
 }
 .main-cards-container-bottom{
     display: grid;
-    grid-template-columns: /*repeat(auto-fit,minmax(270px,1fr))*/ 1fr 1fr;
+    grid-template-columns: /*repeat(auto-fit,minmax(270px,1fr))*/1fr;
     gap: 20px;
 }
 .secondary-main-card-title-layout{

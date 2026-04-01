@@ -13,6 +13,7 @@
     backdrop-filter: blur(15px);
     translate: 30px 0;
     transition: all 0.3s ease-in-out;
+    z-index: 200;
 }
 .success-toast{
     border: 2px solid var(--success-color);

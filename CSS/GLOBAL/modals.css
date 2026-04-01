@@ -31,6 +31,9 @@
     opacity: 1;
     translate: 0 0;
 }
+.modal-active .form-modal-submit-button{
+    display: flex;
+}
 .form-modal form{
     background-color: var(--surface-color);
     padding: 20px;
@@ -44,6 +47,9 @@
     overflow: scroll;
     overflow-x: hidden;
     position: relative;
+}
+.form-modal-submit-button{
+    display: none;
 }
 .modal-close-btn{
     position: absolute;
@@ -124,6 +130,10 @@
     resize: none;
     height: 100px;
     padding-top: 15px;
+    line-height: 23px;
+}
+.form-modal-input-field-group textarea::-webkit-scrollbar{
+    display: none;
 }
 
 .form-modal-input-field-group select:focus{
@@ -184,4 +194,7 @@
 }
 .cancel-action{
     background-color: var(--danger-color);
+}
+.add-new-transaction-date-input{
+    cursor: pointer;
 }

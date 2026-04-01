@@ -266,77 +266,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="dashboard-card main-card">
-                        <div class="secondary-main-card-title-layout">
-                            <h4 class="title">Upcoming Bills</h4>
-                            <span class="no-of-pending-bills">
-                                <span>3</span>
-                                pending
-                            </span>
-                        </div>
-                        <div class="dashboard-default-list-display-layout upcoming-bills-container">
-                            <div class="list-item upcoming-bill">
-                                <div class="list-item-left">
-                                    <div class="list-item-icon upcoming-bill-icon">
-                                        <i class="fas fa-video"></i>
-                                    </div>
-                                    <div class="list-item-info upcoming-bill-info">
-                                        <div class="list-item-description upcoming-bill-description">
-                                            Netfilx Subscription
-                                        </div>
-                                        <div class="list-item-additional-info upcoming-bill-additional-info">
-                                            <span class="category">Due in 3 days</span>
-                                            <i class="fas fa-circle"></i>
-                                            <span class="time">Oct 18</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-item-right">
-                                    <p class="amount-container list-item-amount">$52.99</p>
-                                </div>
-                            </div>
-                            <div class="list-item upcoming-bill">
-                                <div class="list-item-left">
-                                    <div class="list-item-icon upcoming-bill-icon">
-                                        <i class="fas fa-video"></i>
-                                    </div>
-                                    <div class="list-item-info upcoming-bill-info">
-                                        <div class="list-item-description upcoming-bill-description">
-                                            Netfilx Subscription
-                                        </div>
-                                        <div class="list-item-additional-info upcoming-bill-additional-info">
-                                            <span class="category">Due in 3 days</span>
-                                            <i class="fas fa-circle"></i>
-                                            <span class="time">Oct 18</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-item-right">
-                                    <p class="amount-container list-item-amount">$52.99</p>
-                                </div>
-                            </div>
-                            <div class="list-item upcoming-bill">
-                                <div class="list-item-left">
-                                    <div class="list-item-icon upcoming-bill-icon">
-                                        <i class="fas fa-video"></i>
-                                    </div>
-                                    <div class="list-item-info upcoming-bill-info">
-                                        <div class="list-item-description upcoming-bill-description">
-                                            Netfilx Subscription
-                                        </div>
-                                        <div class="list-item-additional-info upcoming-bill-additional-info">
-                                            <span class="category">Due in 3 days</span>
-                                            <i class="fas fa-circle"></i>
-                                            <span class="time">Oct 18</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-item-right">
-                                    <p class="amount-container list-item-amount">$52.99</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -350,13 +279,13 @@
                     <div class="date-range-outer-container">
                         <div class="filter-container filter-select" id="date-range-container">
                             <i class="fas fa-calendar"></i>
-                            <input type="text" id="date-range-input" placeholder="All" class="filter-input">
+                            <input type="text" id="date-range-input" placeholder="All" class="filter-input" data-filter="date-filter">
                         </div>
                         <button class="clear-calendar-btn">Clear calendar</button>
                     </div>
                     <div>
-                        <select name="" id="category-filter" class="filter-select filter-input">
-                            <option value="All" selected>All</option>
+                        <select name="" id="category-filter" class="filter-select filter-input transaction-data-filter-select" data-filter="category-filter">
+                            <option value="all" selected>All</option>
                             <option value="food">Food</option>
                             <option value="income">Income</option>
                             <option value="shopping">Shopping</option>
@@ -367,8 +296,8 @@
                         </select>
                     </div>
                     <div>
-                        <select name="" id="method-filter" class="filter-select filter-input">
-                            <option value="All" selected>All</option>
+                        <select name="" id="method-filter" class="filter-select filter-input transaction-data-filter-select" data-filter="type-filter">
+                            <option value="all" selected>All</option>
                             <option value="debit">Debit</option>
                             <option value="credit">Credit</option>
                         </select>
@@ -393,70 +322,18 @@
                             <th>Amount</th>
                             <th>Method</th>
                         </thead>
-                        <tbody>
-                            <tr class="transaction-container">
-                                <td class="transaction-date">Oct 24 2023</td>
-                                <td class="transaction-category"><i class="fas fa-utensils"></i>Food</td>
-                                <td class="transaction-description">Starbucks Coffee-Morning Brew </td>
-                                <td class="transaction-amount">-$6.50</td>
-                                <td class="transaction-method">
-                                    <span>Debit</span>
-                                    <i class="fas fa-ellipsis-v transaction-actions-toggle"></i>
-                                </td>
-                            </tr>
-                            <tr class="transaction-container">
-                                <td class="transaction-date">Oct 24 2023</td>
-                                <td class="transaction-category"><i class="fas fa-utensils"></i>Food</td>
-                                <td class="transaction-description">Starbucks Coffee-Morning Brew </td>
-                                <td class="transaction-amount">-$6.50</td>
-                                <td class="transaction-method">
-                                    <span>Debit</span>
-                                    <i class="fas fa-ellipsis-v transaction-actions-toggle"></i>
-                                </td>
-                            </tr>
-                            <tr class="transaction-container">
-                                <td class="transaction-date">Oct 24 2023</td>
-                                <td class="transaction-category"><i class="fas fa-utensils"></i>Food</td>
-                                <td class="transaction-description">Starbucks Coffee-Morning Brew </td>
-                                <td class="transaction-amount">-$6.50</td>
-                                <td class="transaction-method">
-                                    <span>Debit</span>
-                                    <i class="fas fa-ellipsis-v transaction-actions-toggle"></i>
-                                </td>
-                            </tr>
-                            <tr class="transaction-container">
-                                <td class="transaction-date">Oct 24 2023</td>
-                                <td class="transaction-category"><i class="fas fa-utensils"></i>Food</td>
-                                <td class="transaction-description">Starbucks Coffee-Morning Brew </td>
-                                <td class="transaction-amount">-$6.50</td>
-                                <td class="transaction-method">
-                                    <span>Debit</span>
-                                    <i class="fas fa-ellipsis-v transaction-actions-toggle"></i>
-                                </td>
-                            </tr>
-                            <tr class="transaction-container">
-                                <td class="transaction-date">Oct 24 2023</td>
-                                <td class="transaction-category"><i class="fas fa-utensils"></i>Food</td>
-                                <td class="transaction-description">Starbucks Coffee-Morning Brew </td>
-                                <td class="transaction-amount">-$6.50</td>
-                                <td class="transaction-method">
-                                    <span>Debit</span>
-                                    <i class="fas fa-ellipsis-v transaction-actions-toggle"></i>
-                                </td>
-                            </tr>
+                        <tbody class="transactions-container">
+                            <!--Dynamic content to be injested by renderTransactions() function-->
                         </tbody>
                     </table>
+                    <div class="empty-table-text">No transactions Available For This Filter</div>
                 </div>
                 <div class="bottom-section">
-                    <p>Showing 1 to 5 of 52 transactions</p>
+                    <p class="active-table-section-text-display">Showing 1 to 5 of 52 transactions</p>
                     <div class="table-control-container">
                         <i class="left-arrow fas fa-angle-left control-arrows"></i>
                         <div class="numbers-container">
-                            <div class="section-number active-section-number">1</div>
-                            <div class="section-number">2</div>
-                            <div class="section-number">3</div>
-                            <div>...</div>
-                            <div class="section-number">9</div>
+                            <!--Dynamic content to be injested by renderTableControlNumbers() function-->
                         </div>
                         <i class="right-arrow fas fa-angle-right control-arrows"></i>
                     </div>
@@ -481,15 +358,15 @@
                 <div class="budget-section-top">
                     <div class="budget-section-card top-cards">
                         <p class="top-card-subtitle">TOTAL BUDGET</p>
-                        <span class="top-card-amount">$4,200</span>
+                        <span class="top-card-amount" id="total-budget-amount"></span>
                     </div>
                     <div class="budget-section-card top-cards">
                         <p class="top-card-subtitle">TOTAL SPENT</p>
-                        <span class="top-card-amount">$2,840</span>
+                        <span class="top-card-amount" id="total-spent-amount"></span>
                     </div>
                     <div class="budget-section-card top-cards">
                         <p class="top-card-subtitle">REMAINING</p>
-                        <span class="top-card-amount">$1,360</span>
+                        <span class="top-card-amount" id="remaining-budget-amount"></span>
                     </div>
                 </div>
 
@@ -520,14 +397,6 @@
                     <div class="settings-group-header-container">
                         <i class="settings-group-icon fas fa-globe"></i>
                         <p>General Preferences</p>
-                    </div>
-                    <div class="settings-language-container">
-                        <label for="language">Language</label>
-                        <select name="language" id="">
-                            <option value="en">English</option>
-                            <option value="spanish">Spanish</option>
-                            <option value="french">French</option>
-                        </select>
                     </div>
                     <div class="setting-container">
                         <div class="setting-left">
@@ -639,20 +508,24 @@
                     <span>Add New Transaction</span>
                 </h2>
                 <div class="form-modal-input-field-group">
+                    <label for="date">Date</label>
+                    <input type="text" name="date" id="" placeholder="Date" required class="add-new-transaction-date-input">
+                </div>
+                <div class="form-modal-input-field-group">
                     <label for="method">Method</label>
-                    <select name="method" id="">
-                        <option value="credit" selected>Credit</option>
+                    <select name="method" id="transaction-type">
+                        <option value="credit">Credit</option>
                         <option value="debit">Debit</option>
                     </select>
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" id="" placeholder="Enter Amount" required>
+                    <input type="number" name="amount" id="transaction-amount" placeholder="Enter Amount" required >
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="category">Category</label>
-                    <select name="category" id="">
-                        <option value="food" selected>Food</option>
+                    <select name="category" id="transaction-category">
+                        <option value="food">Food</option>
                         <option value="income">Income</option>
                         <option value="shopping">Shopping</option>
                         <option value="bills">Bills</option>
@@ -663,9 +536,9 @@
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="description">Description</label>
-                    <textarea name="descriotion" id="" placeholder="Enter Description" required></textarea>
+                    <textarea name="descriotion" id="transaction-description" placeholder="Enter Description" required maxlength="35"></textarea>
                 </div>
-                <button type="submit" class="form-modal-submit-button third-button">Add</button>
+                <button type="submit" class="form-modal-submit-button third-button third-button-active" id="add-new-transaction-submit-button">Add</button>
             </form>
         </div>
 
@@ -680,20 +553,24 @@
                     <span>Edit Transaction</span>
                 </h2>
                 <div class="form-modal-input-field-group">
+                    <label for="date">Date</label>
+                    <input type="text" name="date" id="" placeholder="Date" required class="edit-transaction-date-input">
+                </div>
+                <div class="form-modal-input-field-group">
                     <label for="method">Method</label>
-                    <select name="method" id="">
-                        <option value="credit" selected>Credit</option>
+                    <select name="method" id="transaction-type">
+                        <option value="credit">Credit</option>
                         <option value="debit">Debit</option>
                     </select>
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" id="" placeholder="Enter Amount" required>
+                    <input type="number" name="amount" id="transaction-amount" placeholder="Enter Amount" required>
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="category">Category</label>
-                    <select name="category" id="">
-                        <option value="food" selected>Food</option>
+                    <select name="category" id="transaction-category">
+                        <option value="food">Food</option>
                         <option value="income">Income</option>
                         <option value="shopping">Shopping</option>
                         <option value="bills">Bills</option>
@@ -704,9 +581,9 @@
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="description">Description</label>
-                    <textarea name="descriotion" id="" placeholder="Enter Description" required></textarea>
+                    <textarea name="descriotion" id="transaction-description" placeholder="Enter Description" required maxlength="35"></textarea>
                 </div>
-                <button type="submit" class="form-modal-submit-button third-button">Save All Changes</button>
+                <button type="submit" class="form-modal-submit-button third-button third-button-active" id="edit-transaction-form-submit-btn">Save All Changes</button>
             </form>
         </div>
 
@@ -724,13 +601,12 @@
                 </h2>
                 <div class="form-modal-input-field-group">
                     <label for="amount">Amount</label>
-                    <input type="number" name="amount" id="" placeholder="Enter Amount" required>
+                    <input type="number" name="amount" id="add-new-budget-amount" placeholder="Enter Amount" required>
                 </div>
                 <div class="form-modal-input-field-group">
                     <label for="category">Category</label>
-                    <select name="category" id="">
-                        <option value="food" selected>Food</option>
-                        <option value="income">Income</option>
+                    <select name="category" id="add-new-budget-category">
+                        <option value="food">Food</option>
                         <option value="shopping">Shopping</option>
                         <option value="bills">Bills</option>
                         <option value="entertainment">Entertainment</option>
@@ -738,7 +614,7 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
-                <button type="submit" class="form-modal-submit-button third-button">Add</button>
+                <button type="submit" class="form-modal-submit-button third-button third-button-active" id="add-new-budget-submit-btn">Add</button>
             </form>
         </div>
 
@@ -760,7 +636,6 @@
                     <label for="category">Category</label>
                     <select name="category" id="budget-category">
                         <option value="food">Food</option>
-                        <option value="income">Income</option>
                         <option value="shopping">Shopping</option>
                         <option value="bills">Bills</option>
                         <option value="entertainment">Entertainment</option>
@@ -768,7 +643,7 @@
                         <option value="other">Other</option>
                     </select>
                 </div>
-                <button type="submit" class="form-modal-submit-button third-button">Save All Changes</button>
+                <button type="submit" class="form-modal-submit-button third-button third-button-active" id="edit-budget-submit-form-btn">Save All Changes</button>
             </form>
         </div>
 

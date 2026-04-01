@@ -127,6 +127,7 @@ td{
 .transaction-date{
     color: var(--secondary-text-color);
     font-weight: 700;
+    text-transform: capitalize;
 }
 .transaction-category{
     display: flex;
@@ -134,6 +135,7 @@ td{
     font-size: 12px;
     font-weight: 700;
     gap: 8px;
+    text-transform: capitalize;
 }
 .transaction-category i{
     padding: 10px 20px;
@@ -146,8 +148,13 @@ td{
     font-size: 13px;
 }
 .transaction-amount{
-    color: var(--danger-color);
     font-weight: 700;
+}
+.debit-transaction-amount{
+    color: var(--danger-color);
+}
+.credit-transaction-amount{
+    color: var(--success-color);
 }
 .transaction-method{
     width: fit-content;
@@ -156,15 +163,24 @@ td{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    text-transform: capitalize;
 }
 .transaction-method span{
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
     padding: 6px 12px;
     border-radius: 200px;
     font-size: 12px;
     font-weight: 700;
 }
+.debit-transaction-method span{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+.credit-transaction-method span{
+    background-color: var(--success-color);
+    color: var(--primary-text-color);
+    opacity: 0.8;
+}
+
 .transaction-actions-toggle{
     font-size: 12px;
     transition: var(--general-transition);
@@ -185,16 +201,22 @@ td{
     position: absolute;
     bottom: 0;
     right: 30px;
-    display: none;
     flex-direction: column;
     background-color: var(--surface-color);
     gap: 2px;
     border-radius: 10px;
     padding: 0px 0px;
     border: var(--general-border);
+    translate: 10px 0;
+    opacity: 0;
+    transition: var(--general-transition);
+    pointer-events: none;
 }
-.transaction-actions-container-open{
-    display: flex;
+.transaction-actions-container-active{
+    translate: 0 0;
+    opacity: 1;
+    pointer-events: all;
+    width: fit-content;
 }
 .transaction-actions-container button{
     background: none;
@@ -206,11 +228,15 @@ td{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     font-weight: 700;
     background-color: var(--surface-color);
     cursor: pointer;
     transition: var(--general-transition);
+}
+.transaction-actions-container span{
+    background: none;
+    color: white;
 }
 .transaction-actions-container .edit-transaction{
     border-radius: 10px 10px 0px 0px;
@@ -277,4 +303,21 @@ td{
 }
 .active-section-number{
     background-color: var(--primary-color);
+}
+
+.number-overflow{
+    transition: var(--general-transition);
+}
+.number-overflow-active{
+    color: var(--primary-color);
+    translate: 0 -4px;
+    scale: 1.2;
+    font-size: 20px;
+}
+.empty-table-text{
+    font-family: var(--secondary-font);
+    color: var(--secondary-text-color);
+    font-size: 15px;
+    margin-top: 20px;
+    display: none;
 }

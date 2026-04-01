@@ -8,6 +8,10 @@ export const dataIcons =[
         class: 'fa-video'
     },
     {
+        category:'income',
+        class: 'fa-credit-card'
+    },
+    {
         category:'transportation',
         class: 'fa-car'
     },

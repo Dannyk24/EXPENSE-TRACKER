@@ -1,10 +1,11 @@
-export const transactions = [
-    {
-        id:'id1',
-        date:'12-04-26',
-        category:'food',
-        description:'Breakfast food purchase',
-        amount:10,
-        type:'debit'
-    },
-]
+/*Income cateogry for salaries and allowance but not for budgets*/
+export let transactions = getTransactions()
+
+
+export function saveTransactions(){
+    localStorage.setItem('transactions', JSON.stringify(transactions))
+}
+export function getTransactions(){
+    return JSON.parse(localStorage.getItem('transactions')) || []
+}
+

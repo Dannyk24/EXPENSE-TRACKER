@@ -1,26 +1,8 @@
-export const budgets = [
-    {
-        category:'food',
-        amount:600
-    },
-    {
-        category:'entertainment',
-        amount:300
-    },
-    {
-        category:'transportation',
-        amount:400
-    },
-    {
-        category:'shopping',
-        amount:500
-    },
-    {
-        category:'bills',
-        amount:1500
-    },
-    {
-        category:'other',
-        amount:400
-    },
-]
+export let budgets = getBudgets()
+
+export function saveBudgets(){
+    localStorage.setItem('budgets',JSON.stringify(budgets))
+}
+export function getBudgets(){
+    return JSON.parse(localStorage.getItem('budgets')) || []
+}

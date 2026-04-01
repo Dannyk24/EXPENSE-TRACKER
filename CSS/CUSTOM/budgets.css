@@ -1,3 +1,6 @@
+*{
+    font-family: var(--secondary-font);
+}
 .budget-top-container{
     display: flex;
     justify-content: space-between;
@@ -168,4 +171,9 @@
     to{
         transform: rotate3d(1,1,1,360deg);
     }
+}
+
+#delete-budget-icon{
+    right: 50px;
+    color: var(--danger-color);
 }
