@@ -80,7 +80,6 @@ viewAllTransactionsBtn.addEventListener('click',()=>{
     setActiveTab('transactions')
 })
 
-
 /*BUDGETS SECTION SCRIPT*/
 const budgetsContainer = document.querySelector('.budget-section-bottom')
 function renderBudgets(){
@@ -1051,3 +1050,5 @@ const deleteAppDataBtn = document.querySelector('#delete-app-data-btn')
 deleteTransactionsDataBtn.addEventListener('click',clearTransactions)
 deleteBudgetsDataBtn.addEventListener('click',clearBudgets)
 deleteAppDataBtn.addEventListener('click',clearAppData)
+
+
