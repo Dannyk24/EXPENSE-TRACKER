@@ -1,4 +1,4 @@
-##SITE IS LIVE AT
+## SITE IS LIVE AT
 https://dannyk24.github.io/EXPENSE-TRACKER/
 
 # Expense Tracker 💰
